@@ -1,8 +1,7 @@
-<script setup>
-</script>
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
  
   <section>
-    hello
+    this is location
   </section>
 </template>

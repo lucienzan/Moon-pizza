@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import  AppHeader  from "./components/AppHeader.vue"
+import AppHeader from "./components/AppHeader.vue"
+
 </script>
 
 <template>
@@ -8,6 +9,12 @@ import  AppHeader  from "./components/AppHeader.vue"
     <AppHeader />
   </section>
   <RouterView />
+  <!-- only when you want to show those components only in a home page, you can define multiple components in the route -->
+  <div class="info-block-wrapper">
+    <RouterView name="history"/>
+    <RouterView name="delivery"/>
+  </div> 
+
 </template>
 
 <style scoped>

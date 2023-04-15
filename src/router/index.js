@@ -3,6 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import AdminView from '../views/AdminView.vue'
 import MenuView from '../views/MenuView.vue'
+import History from '../components/History.vue'
+import Location from '../components/Location.vue'
+import Delivery from '../components/Delivery.vue'
 
 
 const router = createRouter({
@@ -11,7 +14,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      components: {
+        default: HomeView,
+        history: History,
+        delivery: Delivery
+      } 
     },
     {
       path: '/about',
@@ -39,7 +46,32 @@ const router = createRouter({
         title: 'MOON Pizza | Menu',
         page: 'event',
     },
-    }
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: AboutView,
+      children: [{
+        path: 'history',
+        name: "history",
+        component: History
+      },
+      {
+        path: 'location',
+        name: "location",
+        component: Location
+      },
+      {
+        path: 'delivery',
+        name: "delivery",
+        component: Delivery
+      }
+      ],
+      meta: {
+        title: 'MOON Pizza | History',
+        page: 'event',
+    },
+    },
   ]
 });
 router.beforeEach((toRoute, fromRoute, next) => {

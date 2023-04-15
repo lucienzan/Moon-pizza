@@ -32,6 +32,21 @@ header {
   text-align: center;
   letter-spacing: 1.3px;
 }
+
+.nav-links a.router-link-exact-active {
+  color: orange;
+}
+
+.info-block-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .info-block-wrapper{
+    flex-direction: row;
+  }
+}
 /*.bg-oly {
   width: 100%;
   position: absolute;
