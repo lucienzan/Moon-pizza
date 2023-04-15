@@ -11,6 +11,7 @@ import { RouterLink } from 'vue-router'
       </RouterLink>
     </h1>
   <nav class="nav-links">
+    <RouterLink :to="{ name: 'home' }">Home</RouterLink>
     <RouterLink :to="{ name: 'menu' }">Menu</RouterLink>
     <RouterLink :to="{ name: 'about' }">About</RouterLink>
     <RouterLink :to="{ name: 'admin' }">Admin</RouterLink>
